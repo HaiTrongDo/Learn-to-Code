@@ -7,8 +7,8 @@
         table, th,td {
             border:1px solid black ;
             font-weight:bold;
+            text-align: center;
         }
-
         td {
             width: 30px;
         }
@@ -22,30 +22,34 @@
 <body>
 <table>
     <tr>
-        <th colspan="4"><p id="display-el"></p></th>
+        <th colspan="4" style="height: 50px; text-align: right"><p id="display-el"></p></th>
     </tr>
     <tr>
-        <td><button onclick='presskey("7")' >7</button></td>
-        <td><button onclick='presskey("8")' >8</button></td>
-        <td><button onclick='presskey("9")' >9</button></td>
-        <td><button onclick='presskey("/")' >/</button></td>
+        <td><button onclick='pressKey("7")' >7</button></td>
+        <td><button onclick='pressKey("8")' >8</button></td>
+        <td><button onclick='pressKey("9")' >9</button></td>
+        <td><button onclick='pressKey("/")' >/</button></td>
     </tr>
     <tr>
-        <td><button onclick='presskey("4")' >4</button></td>
-        <td><button onclick='presskey("5")' >5</button></td>
-        <td><button onclick='presskey("6")' >6</button></td>
-        <td><button onclick='presskey("*")' >x</button></td>
+        <td><button onclick='pressKey("4")' >4</button></td>
+        <td><button onclick='pressKey("5")' >5</button></td>
+        <td><button onclick='pressKey("6")' >6</button></td>
+        <td><button onclick='pressKey("*")' >x</button></td>
     </tr>
     <tr>
-        <td><button onclick='presskey("1")' >1</button></td>
-        <td><button onclick='presskey("2")' >2</button></td>
-        <td><button onclick='presskey("3")' >3</button></td>
-        <td><button onclick='presskey("-")' >-</button></td>
+        <td><button onclick='pressKey("1")' >1</button></td>
+        <td><button onclick='pressKey("2")' >2</button></td>
+        <td><button onclick='pressKey("3")' >3</button></td>
+        <td><button onclick='pressKey("-")' >-</button></td>
     </tr>    <tr>
-        <td><button onclick='presskey("0")' >0</button></td>
-        <td><button onclick='presskey(".")' >.</button></td>
+        <td><button onclick='pressKey("0")' >0</button></td>
+        <td><button onclick='pressKey(".")' >.</button></td>
         <td><button onclick='equal("=")' >=</button></td>
-        <td><button onclick='presskey("+")' >+</button></td>
+        <td><button onclick='pressKey("+")' >+</button></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button onclick='clearAll()' style="width: 100px;" >Clear All</button></td>
+        <td colspan="2"><button onclick='undo()' style="width: 100px;" >Undo</button></td>
     </tr>
 </table>
 </body>
