@@ -19,7 +19,7 @@ function clearAll () {
 
 
 function undo() {
-    display = display.slice(display.length - 1 ,1)
+    display = display.slice(0, -1)
     document.getElementById("display-el").innerText = display
     }
 

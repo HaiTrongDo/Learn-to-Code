@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập if else if</title>
+</head>
+<body>
+<label>Tên đăng nhập</label> <br>
+<input id="userName">
+<br>
+<lable>Password: <br><input type="text" id="password-el"></lable>
+<p id="display"></p>
+ <button onclick="login()">Log In</button>
+
+<script>
+
+
+function login() {
+    let userName = document.getElementById("userName").value;
+    let password = document.getElementById("password-el").value;
+    let display = document.getElementById("display");
+    let result = ""
+
+    if (userName === "Admin") {
+        if (password === "TheMaster") {
+            result = "Welcome";
+            display.innerHTML = result;
+        } else if (password === "") {
+            result = "Canceled"
+            display.innerHTML = result;
+        } else {
+            result = "Wrong Password"
+            display.innerHTML = result;}
+    } else {
+        result = "I do not know you.";
+        display.innerHTML = result;
+    }
+
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
