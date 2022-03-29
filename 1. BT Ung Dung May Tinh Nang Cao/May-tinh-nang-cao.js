@@ -4,9 +4,7 @@ let display = "";
 function pressKey(key) {
     display += key
     document.getElementById("display-el").innerText = display
-    console.log(display);
 }
-
 
 
 function equal(key) {
@@ -17,7 +15,6 @@ function equal(key) {
 function clearAll () {
     display = ""
     document.getElementById("display-el").innerText = display
-    console.log(display);
     }
 
 
