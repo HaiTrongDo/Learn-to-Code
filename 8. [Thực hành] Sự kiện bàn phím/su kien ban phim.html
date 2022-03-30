@@ -20,11 +20,11 @@ function downArrowPressed() {
 }
 function leftArrowPressed() {
   let element = document.getElementById("nobita");
-      element.style.left = parseInt(element.style.left) + 5 + "px"
+      element.style.left = parseInt(element.style.left) - 5 + "px"
 }
 function rightArrowPressed() {
   let element = document.getElementById("nobita");
-      element.style.top = parseInt(element.style.top) - 5 + "px"
+      element.style.left = parseInt(element.style.left) + 5 + "px"
 }
 
 function moveSelection(evt) {
@@ -48,8 +48,6 @@ function moveSelection(evt) {
 function docReady() {
     window.addEventListener('keydown', moveSelection);
 }
-
-
 
 </script>
 
