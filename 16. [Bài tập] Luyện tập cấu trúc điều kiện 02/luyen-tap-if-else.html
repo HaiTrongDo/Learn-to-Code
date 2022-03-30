@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập cấu trúc điều kiện 02</title>
+    <style>
+        button {font-weight: bold;}
+    </style>
+</head>
+<body>
+<h3>Bài 1: Chuyển từ độ C sang độ F.</h3>
+<button id="exercise1" onclick="exercise1()">Bấm để thực hành bài 1</button>
+<script>
+    function exercise1() {
+        let C = prompt("nhập nhiệt độ C");
+        let resultEx1 = C*9/5 +32;
+        let displayEx1 ="Nhiệt độ F là " +resultEx1;
+        alert(displayEx1);
+    }
+
+</script>
+<h3>Bài 2: Chuyển từ mét sang feet</h3>
+<button id="exercise2" onclick="exercise2()">Bấm để thực hành bài 2</button>
+<script>
+    function exercise2() {
+        let m = prompt("nhập số m");
+        let resultEx2 = m*3.2808;
+        let displayEx2 = "số feet tương ứng với " + m + " mét là " + resultEx2;
+        alert(displayEx2);
+    }
+
+</script>
+<h3>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h3>
+<button id="exercise3" onclick="exercise3()">Bấm để thực hành bài 3</button>
+<script>
+    function exercise3() {
+        let square = prompt("nhập số chiều dài cạnh a");
+        let resultEx3 = square ** 2;
+        let displayEx3 = "Diện tích hình vuông cạnh " + square + " là " + resultEx3 + " mét vuông";
+        alert(displayEx3);
+    }
+</script>
+<h3>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</h3>
+<button id="exercise4" onclick="exercise4()">Bấm để thực hành bài 4</button>
+<script>
+    function exercise4() {
+        let rectana = prompt("nhập số chiều dài cạnh a");
+        let rectanb = prompt("nhập số chiều dài cạnh b");
+        let resultEx4 = rectana * rectanb;
+        let displayEx4 = "Diện tích hình chữ nhật cạnh " + rectana + ", " + rectanb + " là " + resultEx4 + " mét vuông";
+        alert(displayEx4);
+    }
+
+</script>
+<h3>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h3>
+<button id="exercise5" onclick="exercise5()">Bấm để thực hành bài 5</button>
+<script>
+    function exercise5() {
+        let triangleA = prompt("nhập số chiều dài cạnh a");
+        let triangleB = prompt("nhập số chiều dài cạnh b");
+        let resultEx5 = Math.sqrt((triangleA**2) + (triangleB**2));
+        let displayEx5 = "Chiều dài cạnh c là " + resultEx5;
+        alert(displayEx5);
+    }
+
+</script>
+<h3>Bài 6: Giải phương trình bậc 1.</h3>
+<button id="exercise6" onclick="exercise6()">Bấm để thực hành bài 6</button>
+<script></script>
+<h3>Bài 7: Giải phương trình bậc 2.</h3>
+<button id="exercise7" onclick="exercise7()">Bấm để thực hành bài 7</button>
+<script></script>
+<h3>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h3>
+<button id="exercise8" onclick="exercise8()">Bấm để thực hành bài 8</button>
+<script></script>
+<h3>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</h3>
+<button id="exercise9" onclick="exercise9()">Bấm để thực hành bài 9</button>
+<script></script>
+<h3>Bài 10: Viết chương trình tính giá điện.</h3>
+<button id="exercise10" onclick="exercise10()">Bấm để thực hành bài 10</button>
+<script></script>
+<h3>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h3>
+<button id="exercise11" onclick="exercise11()">Bấm để thực hành bài 11</button>
+<script></script>
+<h3>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h3>
+<button id="exercise12" onclick="exercise12()">Bấm để thực hành bài 12</button>
+<script></script>
+
+
+
+
+</body>
+</html>
