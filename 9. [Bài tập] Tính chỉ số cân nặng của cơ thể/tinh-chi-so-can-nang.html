@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<p>Chỉ số khối cơ thể (Body mass index-BMI) là một thước đo sức khoẻ dựa trên cân nặng và chiều cao. Nó được tính bằng cách lấy cân nặng đơn vị tính kilogam chia cho bình phương của chiều cao đơn vị tính mét. Công thức:</p>
+<div>bmi = weight / ( height ^ 2 )</div>
+<p>Chỉ số BMI đối với người trên 20 tuổi được phân loại và diễn giải theo bảng sau:</p>
+<img style="width: 400px" src="1.png" alt="bang tinh chi so">
+<br><br><br>
+
+<label for="weight-el">Chỉ sổ cân nặng của bạn:</label> <br>
+<input id="weight-el" type="text"><br>
+<label for="height-el">Chiều cao cảu bạn:</label><br><input id="height-el" type="text">
+<br>
+<button onclick="calculation()">Tính toán chỉ số của bạn</button>
+<p>Chỉ số của bạn là: <span id="display-bmi" ></span> <br>
+<span id="displayResult"> Kết quả là: </span></p>
+<script>
+
+    let displaybmi = document.getElementById("display-bmi");
+    let displayResult = document.getElementById("displayResult");
+
+
+    function calculation() {
+    let weightEl = Number(document.getElementById("weight-el").value);
+    let heightEl = Number(document.getElementById("height-el").value);
+
+    let bmi = weightEl / (heightEl*2);
+
+
+    let result;
+    if (bmi < 18.5) {
+            result = "Underweight"
+        } else if (bmi < 25.0) {
+            result = "Normal"
+        } else if (bmi < 30) {
+            result = "Overweight"
+        } else {
+            result = "Obese"
+    }
+        displayResult.innerHTML = result
+        displaybmi.innerHTML = bmi.toFixed(2);
+
+
+    }
+
+</script>
+
+
+</body>
+</html>
