@@ -1,10 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập cấu trúc điều kiện 01</title>
 </head>
 <body>
-$END$
+
+<h3>Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</h3>
+<button id="exercise1" onclick="exercise1()">Bấm để thực hành bài 1</button>
+
+<script>
+function exercise1() {
+    let numa = prompt("Nhập số a vào đây")
+    let numb = prompt("Nhập số b vào đây")
+    let display = ""
+    if (numa % numb === 0) {
+        display = "Số " + numa + " chia hết cho " + numb + " nhé. Thế mà không biết, kém"
+        alert(display)
+    } else {
+        display = "Số " + numa + " chia hết cho " + numb + " thế nào được hả Ông nội"
+        alert(display)
+    }
+}
+</script>
+
+<h3>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</h3>
+<button id="exercise2" onclick="exercise2()">Bấm để thực hành bài 2</button>
+
+<script>
+    function exercise2() {
+let age = prompt("nhập số tuổi của học sinh")
+let displayex2 = ""
+if (age > 16) {
+    displayex2 = "học sinh " + age + " thừa tuổi vào học lớp 10"
+    alert(displayex2)
+} else {
+    displayex2 = "học sinh " + age + " không đủ tuổi vào học lớp 10"
+}   alert(displayex2)
+    }
+</script>
+
+<h3>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</h3>
+<button id="exercise3" onclick="exercise3()">Bấm để thực hành bài 3</button>
+<script>
+    function exercise3() {
+        let number = prompt("Nhập số cần so sánh với 0")
+        let displayex3 = ""
+        if (number > 0) {
+            displayex3 = number + " lớn hơn 0"
+            alert(displayex3)
+        } else if (number === 0) {
+            displayex3 = "Số bạn nhập là 0"
+            alert(displayex3)
+        } else {
+            displayex3 = number + " nhỏ hơn 0"
+            alert(displayex3)
+        }
+    }
+
+</script>
+<h3>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</h3>
+<button id="exercise4" onclick="exercise4()">Bấm để thực hành bài 4</button>
+<script>
+    function exercise4() {
+        let inteNum1 = +prompt("Nhập số đầu tiên cần so sánh");
+        let inteNum2 = +prompt("Nhập số thứ hai cần so sánh");
+        let inteNum3 = +prompt("Nhập số thứ ba cần so sánh");
+        let displayex4 = "";
+        if (inteNum1 > inteNum2 && inteNum1 > inteNum3) {
+            displayex4 = "số " + inteNum1 + " là số lớn nhất nhé."
+            alert(displayex4)
+        } else if (inteNum2 > inteNum3) {
+            displayex4 = "số " + inteNum2 + " là số lớn nhất nhé."
+            alert(displayex4)
+        } else {
+            displayex4 = "số " + inteNum3 + " là số lớn nhất nhé."
+            alert(displayex4)
+        }
+
+    }
+
+</script>
+
+
+<h3>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h3>
+<button id="exercise5" onclick="exercise5()">Bấm để thực hành bài 5</button>
+<script>
+    function exercise5() {
+        let testScore = +prompt("Nhập điểm bài kiểm tra");
+        let midTestScore = +prompt("Nhập điểm thi giữa kỳ");
+        let finalTest = +prompt("Nhập điểm thi cuối kỳ");
+        let averageScore = (testScore + midTestScore + finalTest)/3
+        let displayex5 = ""
+
+        if (averageScore < 10 && averageScore >= 8.5 ) {
+            displayex5 = "học sinh đạt " + averageScore + ", học lực giỏi"
+            alert(displayex5)
+        } else if (averageScore < 8.5 && averageScore >= 7 ) {
+            displayex5 = "học sinh đạt " + averageScore + ", học lực khá"
+            alert(displayex5)
+        } else {
+            displayex5 = "học sinh đạt " + averageScore + ", học lực trung bình"
+            alert(displayex5)
+        }
+    }
+</script>
+
+<h3>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h3>
+<button id="exercise6" onclick="exercise6()">Bấm để thực hành bài 6</button>
+<script></script>
+<h3>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h3>
+<button id="exercise7" onclick="exercise7()">Bấm để thực hành bài 7</button>
+<script></script>
+
+
 </body>
 </html>
