@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me game</title>
+</head>
+<body>
+
+<!--Sử dụng các sự kiện onclick và onmouseover-->
+<!--Sử dụng hàm Math.random() để sinh ra các số ngẫu nhiên-->
+<!--Sử dụng các thuộc tính window.innerHeight và window.innerWidth để lấy chiều cao và chiều rộng của trình duyệt-->
+<!--Sử dụng hàm document.getElementById để lấy về nút NO-->
+<!--Sử dụng thuộc tính style.left và style.top để thay đổi vị trí của nút NO-->
+
+<h1 style="position:absolute; left:220px; top:175px">Do you love me?</h1>
+<input type="button" value=" YESsss" onclick="yesClick()" style="position:absolute; left:285px; top:235px;"/>
+<input type="button" id="btnNo" value="NO, I DO NOT" onmouseover="moveNo()" style="position:absolute; left:360px; top:235px;"/>
+
+
+<script>
+
+   // document.getElementById("btnNo").addEventListener("mouseover", moveNo)
+
+    function moveNo() {
+        let btnNoLeft = parseInt(Math.random()*100) + "%";
+        let btnNoTop = parseInt(Math.random()*100) + "%";
+        document.getElementById("btnNo").style.left = btnNoLeft
+        document.getElementById("btnNo").style.top = btnNoTop
+    }
+
+    function yesClick() {
+        alert("You are very right!!!!")
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
