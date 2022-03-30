@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Nâng Cao</title>
+    <style>
+        table, th,td {
+            border:1px solid black ;
+            font-weight:bold;
+            text-align: center;
+        }
+        td {
+            width: 30px;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4" style="height: 50px; text-align: right"><p id="display-el"></p></th>
+    </tr>
+    <tr>
+        <td><button onclick='pressKey("7")' >7</button></td>
+        <td><button onclick='pressKey("8")' >8</button></td>
+        <td><button onclick='pressKey("9")' >9</button></td>
+        <td><button onclick='pressKey("/")' >/</button></td>
+    </tr>
+    <tr>
+        <td><button onclick='pressKey("4")' >4</button></td>
+        <td><button onclick='pressKey("5")' >5</button></td>
+        <td><button onclick='pressKey("6")' >6</button></td>
+        <td><button onclick='pressKey("*")' >x</button></td>
+    </tr>
+    <tr>
+        <td><button onclick='pressKey("1")' >1</button></td>
+        <td><button onclick='pressKey("2")' >2</button></td>
+        <td><button onclick='pressKey("3")' >3</button></td>
+        <td><button onclick='pressKey("-")' >-</button></td>
+    </tr>    <tr>
+        <td><button onclick='pressKey("0")' >0</button></td>
+        <td><button onclick='pressKey(".")' >.</button></td>
+        <td><button onclick='equal("=")' >=</button></td>
+        <td><button onclick='pressKey("+")' >+</button></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button onclick='clearAll()' style="width: 100px;" >Clear All</button></td>
+        <td colspan="2"><button onclick='undo()' style="width: 100px;" >Undo</button></td>
+    </tr>
+</table>
+</body>
+    <script src="May-tinh-nang-cao.js"></script>
+</html>
