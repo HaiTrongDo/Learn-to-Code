@@ -66,19 +66,90 @@
 </script>
 <h3>Bài 6: Giải phương trình bậc 1.</h3>
 <button id="exercise6" onclick="exercise6()">Bấm để thực hành bài 6</button>
-<script></script>
+<script>
+    function exercise6() {
+        let ttNuma = prompt("nhập số a");
+        let ttNumb = prompt("nhập số b");
+        let resultEx6 = -ttNumb/ttNuma;
+        let displayEx6 = "Phương trình bậc 1 có a,b = " + ttNuma + ", " + ttNumb + " thì x = " + resultEx6
+        alert(displayEx6)
+    }
+</script>
 <h3>Bài 7: Giải phương trình bậc 2.</h3>
 <button id="exercise7" onclick="exercise7()">Bấm để thực hành bài 7</button>
-<script></script>
+<script>
+    function exercise7() {
+        let ptNuma = prompt("nhập số a");
+        let ptNumb = prompt("nhập số b");
+        let ptNumc = prompt("nhập số c");
+        let resultEx7 = ""
+        let result2Ex7 = ""
+
+        if (ptNuma === 0) {
+            // result =;
+            resultEx7 = "Đây không phải phương trình bậc 2";
+            result2Ex7 = "";
+        } else {
+            let denta = ptNumb**2 - 4*ptNuma*ptNumc;
+            if (denta < 0) {
+                resultEx7 = "Phương trình vô nghiệm";
+                result2Ex7 = "";
+            }
+            else if (denta === 0) {
+                resultEx7 = -ptNumb/(2*ptNuma);
+                result2Ex7 = resultEx7;
+            }
+            else if (denta > 0) {
+                resultEx7 = (-ptNumb + Math.sqrt(denta))/(2*ptNuma)
+                result2Ex7 = (-ptNumb - Math.sqrt(denta))/(2*ptNuma)
+            }
+        }
+            alert(resultEx7)
+            alert(result2Ex7)
+    }
+
+</script>
 <h3>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h3>
 <button id="exercise8" onclick="exercise8()">Bấm để thực hành bài 8</button>
-<script></script>
+<script>
+    function exercise8() {
+        let humanAge = prompt("nhập số tuổi của con người vào đây");
+        let displayEx8 = ""
+        if (humanAge > 0 && humanAge < 120) {
+            displayEx8 = "Con người có thể sống dược từ 0-120 tuổi, sô tuổi bạn nhập vao là " + humanAge + ", có thể là tuổi của con người."
+            alert(displayEx8)
+        } else {
+            displayEx8 = humanAge + " không phai là tuổi của con người."
+            alert(displayEx8)
+        }
+    }
+
+
+</script>
 <h3>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</h3>
 <button id="exercise9" onclick="exercise9()">Bấm để thực hành bài 9</button>
-<script></script>
+<script>
+    function exercise9() {
+        let lengthA = prompt("Nhập chiều dài cạnh a");
+        let lengthB = prompt("Nhập chiều dài cạnh b");
+        let lengthC = prompt("Nhập chiều dài cạnh c");
+        let displayEx9 = ""
+
+        if (lengthA > 0 && lengthB > 0 && lengthC > 0) {
+            if (lengthA + lengthB > lengthC || lengthB + lengthC > lengthA || lengthA + lengthC > lengthB) {
+                displayEx9 = "tam giác có chiều dài " + lengthA + ", " + lengthB + ", " + lengthC + " là cạnh của một tam giác";
+                alert(displayEx9)
+            }
+        } else {
+            displayEx9 = "tam giác có chiều dài " + lengthA + ", " + lengthB + ", " + lengthC + " không phải là cạnh của một tam giác";
+            alert(displayEx9)
+        }
+    }
+</script>
+
 <h3>Bài 10: Viết chương trình tính giá điện.</h3>
 <button id="exercise10" onclick="exercise10()">Bấm để thực hành bài 10</button>
-<script></script>
+<script> </script>
 <h3>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h3>
 <button id="exercise11" onclick="exercise11()">Bấm để thực hành bài 11</button>
 <script></script>
