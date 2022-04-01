@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<p id="display-el"></p>
+
+<script>
+
+function checkPrimeNum(N) {
+       if (N < 2) {
+           return false;
+       }
+
+       for (let i = 2; i < N; i++) {
+               if (N % i === 0) {
+                   return false;
+               }
+           }
+           return true
+       }
+
+
+function primeList() {
+       let x = +prompt("Điền những số nguyên bạn cần")
+       let count = 0
+       let N = 0
+
+       while (count < x) {
+           if (checkPrimeNum(N) === true) {
+               count++;
+               console.log(N + " la so nguyen to")
+           }
+           N++;
+       }
+
+   }
+primeList()
+
+</script>
+</body>
+</html>
