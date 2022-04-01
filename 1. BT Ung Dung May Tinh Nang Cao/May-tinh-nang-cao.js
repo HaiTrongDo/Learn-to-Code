@@ -7,7 +7,7 @@ function pressKey(key) {
 }
 
 
-function equal(key) {
+function equal() {
     result = eval(display)
     document.getElementById("display-el").innerText = result
 }

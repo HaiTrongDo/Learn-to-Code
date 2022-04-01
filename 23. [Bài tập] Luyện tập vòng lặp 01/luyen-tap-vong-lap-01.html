@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<h3>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn</h3>
+<button onclick="exercise1()"> Bấm để thực hành bài 1</button>
+<script>
+
+    function exercise1(){
+        let count = 0
+        while (count < 100) {
+            count++
+            console.log(count)
+        }
+        alert("đã hoàn thành")
+    }
+
+</script>
+
+
+<h3>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập
+    vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</h3>
+<button onclick="exercise2()"> Bấm để thực hành bài 2</button>
+<script>
+    function exercise2() {
+        let Cdegree = +prompt("Nhập nhiệt độ hiện tại")
+
+        while (Cdegree < 20 || Cdegree > 100) {
+            if (Cdegree < 20) {
+               return alert("Nhiệt độ quá thấp, làm ơn tăng nhiệt độ lên")
+            } else {
+                return alert("Nhiệt độ quá cao, giảm nhiệt đi bạn ơi")
+            }
+        }
+return alert("Nhiệt độ ổn định")
+    }
+
+
+</script>
+
+<h3>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h3>
+<button onclick="exercise3()"> Bấm để thực hành bài 3</button>
+
+<script>
+    function exercise3() {
+let firstNum = 0;
+let secondNum = 1;
+let tempNum=0;
+let displayEx3 = ""
+for (let i = 0; i < 20 ; i++) {
+    displayEx3 += firstNum +", "
+    tempNum = firstNum + secondNum
+    firstNum = secondNum
+    secondNum = tempNum
+    }
+console.log(displayEx3)
+// return firstNum;
+    }
+</script>
+
+<h3>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</h3>
+<button onclick="exercise4()"> Bấm để thực hành bài 4</button>
+
+<script>
+    function exercise41(j) {
+        let firstNum = 0;
+        let secondNum = 1;
+        let tempNum=0;
+           for (let i = 0; i < j ; i++) {
+            tempNum = firstNum + secondNum
+            firstNum = secondNum
+            secondNum = tempNum
+        }
+        return secondNum;
+    }
+
+function exercise4() {
+    let j = 1;
+    let displayEx4 = ""
+    while (exercise41(j) % 5 !==0) {
+        j++
+
+    }
+    displayEx4 = exercise41(j)
+alert(displayEx4)
+}
+
+</script>
+
+</body>
+</html>
