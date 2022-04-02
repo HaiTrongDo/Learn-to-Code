@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập vòng lặp 02</title>
+</head>
+<body>
+<h3> Bài 1: In dãy Fibonaci</h3>
+<button id="exercise1" onclick="exercise1()"> Bấm để thực hành bài 1</button>
+<script>
+    function exercise1() {
+        let firstNum = 0;
+        let secondNum = 1;
+        let tempNum=0;
+        let displayEx1 = ""
+        for (let i = 0; i < 20 ; i++) {
+            displayEx1 += firstNum +", "
+            tempNum = firstNum + secondNum
+            firstNum = secondNum
+            secondNum = tempNum
+        }
+        alert(displayEx1)
+
+    }
+</script>
+
+
+<h3>Bài 2: Tính giai thừa của một số nguyên dương</h3>
+<button id="exercise2" onclick="exercise2()"> Bấm để thực hành bài 2</button>
+
+<script>
+    function exercise2() {
+        let n = prompt("nhập số N giai thừa cần tính")
+        let resultEx2 = 1
+        for (let i = 1; i <= n; i++) {
+            resultEx2 *=i
+        }alert(`Giai thừa của ${n} có kết quả là ${resultEx2} `);
+    }
+
+</script>
+
+
+<h3>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</h3>
+<button id="exercise3" onclick="exercise3()"> Bấm để thực hành bài 3</button>
+<script>
+function exercise3() {
+    for (let i = 1; i < 5 ; i++) {
+        for (let j = 5; j > i; j--) {
+            document.writeln(" * ")
+        } document.writeln("<br/>")
+    }
+
+    for (let i = 1; i < 5 ; i++) {
+        for (let j = 0; j < i; j++) {
+            document.writeln(" * ")
+        } document.writeln("<br/>")
+    }
+}
+</script>
+
+<h3>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h3>
+<button id="exercise5" onclick="exercise5()"> Bấm để thực hành bài 5</button>
+<script>
+    function exercise5() {
+        let interestRate = +prompt("nhập lãi suất vay % hàng tháng")/100
+        let moneyAmount = +prompt("nhập số tiền vay")
+        let periodInMonths = 12*prompt("Nhập thời hạn vay (đơn vị năm)")
+        let months = +prompt("tháng bạn cần tìm")
+        repaidAmountInMonth(months)
+
+        function repaidAmountInMonth(months) {
+            let monthlyFixPayment = moneyAmount/periodInMonths ;
+            let debtPaid = months*monthlyFixPayment;
+            let remainDebtWithInterest = (moneyAmount - debtPaid)*interestRate;
+            let totalRepaidAmount = monthlyFixPayment + remainDebtWithInterest;
+            return alert(`số tiền phải trả tháng ${months}, là ${totalRepaidAmount}. Số tiền gốc là ${monthlyFixPayment}, Số tiền lãi là ${remainDebtWithInterest}`);
+        }
+    }
+
+
+</script>
+
+
+</body>
+</html>
