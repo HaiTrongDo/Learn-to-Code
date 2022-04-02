@@ -90,5 +90,93 @@ alert(displayEx4)
 
 </script>
 
+
+<h3>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h3>
+<button onclick="exercise5()"> Bấm để thực hành bài 5</button>
+<script>
+    function exercise5() {
+        let firstNum = 0;
+        let secondNum = 1;
+        let tempNum=0;
+        let displayEx3 = 0
+        for (let i = 0; i < 20 ; i++) {
+            displayEx3 += firstNum
+            tempNum = firstNum + secondNum
+            firstNum = secondNum
+            secondNum = tempNum
+        }
+        alert("tổng 20 số đầu tiên trong dãy fibonacci là : " + displayEx3)
+// return firstNum;
+    }
+</script>
+
+
+<h3>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h3>
+<button onclick="exercise6()"> Bấm để thực hành bài 6</button>
+<script>
+    function exercise6() {
+        let resultEx6 = 0
+        for ( let i = 0; i < 30; i ++){
+                resultEx6 += i*7
+            }
+
+    alert("Tổng số 30 số đầu tiên trong số tự nhiên chia hết cho 7 là: " + resultEx6)
+    }
+</script>
+
+<h3>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</h3>
+<button onclick="exercise7()"> Bấm để thực hành bài 7</button>
+<script>
+function exercise7(){
+    let displayEx7 = ""
+    for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 ===0) {
+        displayEx7 += "FizzBuzz" + ", "
+    } else if (i % 5 ===0) {
+        displayEx7 += "Buzz" + ", "
+    } else if (i % 3 ===0) {
+        displayEx7 += "Fizz" + ", "
+    } else {
+        displayEx7 += i + ", "
+    }
+    }
+alert(displayEx7)
+}
+
+
+
+
+</script>
+
+<h3>Bài 8: Game đoán số <br>
+    Nâng cấp game "Hãy thử đoán xem!"</h3>
+<button onclick="exercise8()"> Bấm để thực hành bài 8</button>
+
+<script>
+    function exercise8() {
+        let numMin = prompt("nhập số nhỏ nhất vào đây:")
+        let numMax = prompt("nhập số lớn nhất vào đây:")
+        let ramdomNum = parseInt(Math.random() * (numMax - numMin) + numMin);
+        console.log(ramdomNum)
+        let alive = true;
+        let guessNum = 0
+
+        for (let i = 0; i < 3; i++) {
+            guessNum = +prompt("nhập số bạn đoán vào đây")
+            if (guessNum === ramdomNum && alive === true) {
+                alert("bạn đã chiến thắng chò chơi")
+                alive = false;
+                break;
+            } else if (guessNum < ramdomNum || guessNum > ramdomNum) {
+                alert("kết quả sai nhập lại đi")
+                alive = true;
+
+            }
+        }
+
+    }
+
+</script>
+
 </body>
 </html>
