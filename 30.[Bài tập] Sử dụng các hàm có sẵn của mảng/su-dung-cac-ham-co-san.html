@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<script>
+let myColor = ["Red", "Green", "White", "Black"];
+let stringMyColor = myColor.toString()
+let joinMyColor = myColor.join()
+
+console.log(joinMyColor);
+console.log(stringMyColor);
+
+
+</script>
+bài 2
+<title>Insert dashes (-) between even numbers</title>
+
+<script>
+    let num = window.prompt();
+    let str = num.toString();
+    let result = [str[0]];
+
+    for (let x = 1; x < str.length; x++) {
+        if ((str[x-1]%2 === 0) && (str[x]%2 ===0)) {
+            result.push('-', str[x]);
+        } else {
+            result.push(str[x])
+        }
+
+    }
+    // console.log(result.toString());
+    console.log(result.join());
+
+</script>
+
+
+bài 3
+
+
+<script>
+    let strs = 'Testing The UperCase and LowerCase Function';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result1 = [];
+
+    for (let x=0; x < strs.length; x++) {
+     if (UPPER.indexOf(strs[x]) !== -1)  {
+         result1.push(strs[x].toLowerCase())
+     } else if (LOWER.indexOf(strs[x]) !== -1) {
+         result1.push(strs[x].toUpperCase())
+     } else {
+         result1.push(strs[x])
+     }
+    }
+    console.log(result1.join(''));
+
+
+// second methods
+
+
+let swapCase = function(letters){
+    let newLetters = "";
+    for(let i = 0; i<letters.length; i++){
+        if(letters[i] === letters[i].toLowerCase()){
+            newLetters += letters[i].toUpperCase();
+        }else {
+            newLetters += letters[i].toLowerCase();
+        }
+    }
+    console.log(newLetters);
+    return newLetters;
+}
+
+let text = 'So, today we have REALLY good day';
+
+let swappedText = swapCase(text)
+
+</script>
+</body>
+</html>
