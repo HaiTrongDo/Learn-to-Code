@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>[Bài tập] Từ điển</title>
 </head>
 <body>
+<label>Search a word: <input type="text" id="wordSearch"></label>
+<button id="btnSearch" onclick="wordSearching()">Search</button>
+<p id="display-el"></p>
+<script>
+
+
+    function wordSearching() {
+        let engDict = ["Hello", "Hi", "bye"];
+        let vietDict = ["Xin Chao", "Chào", "Tạm biệt"];
+
+        let wordSearch = document.getElementById("wordSearch");
+        console.log(wordSearch.value);
+        let displayEl = "";
+        let index = -1;
+
+
+        for (let i = 0; i < engDict.length; i++) {
+            if (wordSearch.value.toLowerCase() === engDict[i].toLowerCase()) {
+               index = i;
+               break;
+            }
+        }
+
+        if (index !== -1) {
+            displayEl = vietDict[index];
+        } else {
+            displayEl = "The word is not found"
+        }
+        // return displayEl;
+        document.getElementById("display-el").innerHTML = displayEl;
+
+    }
+
+
+</script>
 
 </body>
 </html>
