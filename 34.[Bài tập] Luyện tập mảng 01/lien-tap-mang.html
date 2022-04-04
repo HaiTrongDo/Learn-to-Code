@@ -10,29 +10,122 @@
 <button id="exercise1" onclick="exercise1()" >Bấm để làm bài 1</button>
 <script>
 function exercise1() {
+let arrEx1 =[]
+    for (let i = 1; i <=10 ; i++) {
+        arrEx1[i] = Math.floor(Math.random()*20 + 1);
+    }
 
-
-
+function findNumbGreaterThanTen() {
+    let count = 0;
+    for (let i = 1; i <=10 ; i++) {
+        if (arrEx1[i] > 10) {
+        count++;
+    }
+    }
+    alert(`Your input Array has ${count} number(s) that greater than 10` )
 }
-function find
-
+findNumbGreaterThanTen()
+}
 
 </script>
 <h3>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</h3>
-<button id="exercise2" onclick="exercise2()" >Bấm để làm bài 2</button>
-<script></script>
+<button id="exercise2" onclick="exercise2()">Bấm để làm bài 2</button>
+<script>
+    function exercise2() {
+    let arrEx2 =[]
+    for (let i = 0; i <10 ; i++) {
+        arrEx2[i] = Math.floor(Math.random()*20 + 1)
+    }
+let max = arrEx2[0]
+let index = 0
+    for (let j = 1; j < arrEx2.length - 1; j++) {
+    if (arrEx2[j] > max) {
+        max = arrEx2[j];
+        index = j;
+        }
+    }
+alert("the biggest number is " + max + " at index " + index)
+}
+
+</script>
 <h3>Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</h3>
-<button id="exercise3" onclick="exercise3()" >Bấm để làm bài 3</button>
-<script></script>
+<button id="exercise3" onclick="exercise3()">Bấm để làm bài 3</button>
+<script>
+    function exercise3() {
+        let arrEx3 =[]
+        let max = arrEx3[0]
+        let sum = 0
+        let index = 0
+
+        for (let i = 0; i <10 ; i++) {
+            arrEx3[i] = Math.floor(Math.random()*20 + 1)
+        }
+        for (let j = 0; j < arrEx3.length - 1; j++) {
+            sum += arrEx3[j]
+            if (arrEx3[j] > max) {
+                max = arrEx3[j];
+                index = j;
+            }
+        }
+        let average=sum/10
+        alert("the biggest number is " + max + " in average of " + average)
+    }
+
+</script>
 <h3>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h3>
 <button id="exercise4" onclick="exercise4()" >Bấm để làm bài 4</button>
-<script></script>
+<script>
+    function exercise4() {
+        let arrEx4 = []
+        for (let i = 0; i < 5; i++) {
+            arrEx4[i] = prompt(`Nhập số tự nhiên để thêm vào Array số thứ tự ${i}`)
+        }
+        arrEx4.reverse()
+        console.log(arrEx4);
+    }
+
+</script>
 <h3>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</h3>
-<button id="exercise5" onclick="exercise5()" >Bấm để làm bài 5</button>
-<script></script>
+<button id="exercise5" onclick="exercise5()">Bấm để làm bài 5</button>
+<script>
+    function exercise5() {
+        let arrEx5 = []
+        let counterEx5 = 0
+        for (let i = 0; i < 5; i++) {
+            arrEx5[i] = prompt(`Nhập số tự nhiên để thêm vào Array số thứ tự ${i}`)
+            if (arrEx5[i] < 0) {
+                counterEx5++
+            }
+        }
+        alert(`dãy số bạn nhập có ${counterEx5} số âm`)
+    }
+</script>
 <h3>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</h3>
 <button id="exercise6" onclick="exercise6()" >Bấm để làm bài 6</button>
-<script></script>
+<script>
+    function exercise6() {
+    let arrEx6 =[]
+    let checking = false
+    let indexEx6 = 0
+    let v = +prompt("input the number that you need to find on the Array")
+    for (let i = 1; i <=10 ; i++) {
+        arrEx6[i] = Math.floor(Math.random()*20 + 1);
+        console.log(arrEx6[i]);
+        if (arrEx6[i] === v) {
+        checking = true
+        indexEx6 = i
+        }
+    }
+
+    if (checking) {
+        alert(`Number ${v} found in the array at index ${indexEx6}`)
+    } else {
+        alert(`${v} is not in the array`)
+    }
+    }
+
+
+</script>
 <h3>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</h3>
 <button id="exercise7" onclick="exercise7()" >Bấm để làm bài 7</button>
 <script></script>
