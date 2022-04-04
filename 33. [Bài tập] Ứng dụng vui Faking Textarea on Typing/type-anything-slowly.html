@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
 </head>
-<body>
-$END$
+<body onload="keyProcessing()" style="text-align: center">
+<label>Type Anything slowly <br>
+<textarea name="textArea" id="textArea-el" cols="30" rows="10" ></textarea>
+</label>
+<p id="display-el"></p>
+
+<script>
+
+
+function keyProcessing() {
+    let display = "";
+    let textArea = document.getElementById("textArea-el").value.length
+    let textArr =["T","Ô","I"," ","L","À"," ","M","Ộ","T"," ","Đ","Ứ","A"," ","N","G","Ố","C","!"]
+
+    if (textArea > 0 && textArea < 22) {
+        for (let i = 0; i < textArea ; i++) {
+            display += textArr[i];
+            document.getElementById("textArea-el").value = display
+        }
+    } else {
+        display = ""
+        document.getElementById("textArea-el").value = display
+    }
+
+    document.getElementById("textArea-el").value = display;
+    display = "";
+    setTimeout("keyProcessing()", 1);
+};
+
+
+
+
+</script>
+
+
 </body>
 </html>
