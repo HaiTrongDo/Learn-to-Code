@@ -101,7 +101,7 @@ alert("the biggest number is " + max + " at index " + index)
     }
 </script>
 <h3>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</h3>
-<button id="exercise6" onclick="exercise6()" >Bấm để làm bài 6</button>
+<button id="exercise6" onclick="exercise6()">Bấm để làm bài 6</button>
 <script>
     function exercise6() {
     let arrEx6 =[]
@@ -127,14 +127,68 @@ alert("the biggest number is " + max + " at index " + index)
 
 </script>
 <h3>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</h3>
-<button id="exercise7" onclick="exercise7()" >Bấm để làm bài 7</button>
-<script></script>
+<button id="exercise7" onclick="exercise7()">Bấm để làm bài 7</button>
+<script>
+    function exercise7() {
+        let arrEx7 =[]
+        let checkingEx7 = false
+        let indexEx7 = 0
+        let v = +prompt("input the number that you need to find on the Array")
+        for (let i = 0; i <10 ; i++) {
+            arrEx7[i] = Math.floor(Math.random()*20 + 1);
+            if (arrEx7[i] === v) {
+                checkingEx7 = true
+                indexEx7 = i
+            }
+            console.log(arrEx7);
+        }
+        if (checkingEx7) {
+            alert(`Number ${v} found in the array at index ${indexEx7}`)
+        } else {
+            alert(`${v} is not in the array`)
+        }
+
+
+        arrEx7.splice(indexEx7, 1,)
+        arrEx7.push(0)
+        console.log(arrEx7)
+
+
+    }
+
+
+</script>
 <h3>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</h3>
-<button id="exercise8" onclick="exercise8()" >Bấm để làm bài 8</button>
-<script></script>
+<button id="exercise8" onclick="exercise8()">Bấm để làm bài 8</button>
+<script>
+function exercise8() {
+    let arrEx8 =[]
+    for (let i = 0; i <10 ; i++) {
+        arrEx8[i] = Math.floor(Math.random() * 20 + 1);
+    }
+    console.log(arrEx8)
+    arrEx8.sort((a,b) => b - a);
+    console.log(arrEx8)
+}
+</script>
 <h3>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</h3>
-<button id="exercise9" onclick="exercise9()" >Bấm để làm bài 9</button>
-<script></script>
+<button id="exercise9" onclick="exercise9()">Bấm để làm bài 9</button>
+<script>
+
+    function exercise9() {
+    let arrEx9 = []
+    let arrEx91 = []
+    for (let i = 0; i <10 ; i++) {
+        arrEx9[i] = Math.floor(Math.random() * 20 + 1);
+        arrEx91[i] = Math.floor(Math.random() * 20 + 1);
+    }
+    let c = [...arrEx9,...arrEx91];
+        console.log(arrEx9);
+        console.log(arrEx91);
+        console.log(c)
+    }
+
+</script>
 
 </body>
 </html>
