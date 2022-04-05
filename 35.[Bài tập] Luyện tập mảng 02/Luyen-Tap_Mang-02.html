@@ -1,10 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<h3>Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn, in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau</h3>
+<button onclick="exercise1()" > Bấm để thực hành bài 1</button>
+<script>
+
+    function exercise1() {
+        let arrEx1 = [];
+        let rows = 10;
+        let col = 10
+        for (let i = 0; i < rows; i++) {
+            arrEx1[i] = new Array(rows)
+            for (let j = 0; j < col; j++) {
+                arrEx1[i].push(Math.floor(Math.random() * 20 + 1));
+                }
+            }
+
+            console.log(arrEx1);
+    }
+</script>
+
+<h3>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"</h3>
+<button onclick="exercise2()">Bấm để thực hành bài 2</button>
+<script>
+
+    function exercise2() {
+    let arrEx2 = [ 'c', 's', 'c', '2', '6', '1' ];
+    let first = 0;
+    let last= arrEx2.length - 1;
+    let temp=""
+    while (first < last) {
+        temp = arrEx2[first];
+        arrEx2[first] = arrEx2[last];
+        arrEx2[last] = temp;
+        first++
+        last--
+    }
+        alert(arrEx2);
+    }
+
+</script>
+
+<h3>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng. </h3>
+<button onclick="exercise3()">Bấm để thực hành bài 3</button>
+<script>
+
+    function exercise3() {
+
+        let arrEx3 = [];
+        let rows = 10;
+        let col = 10
+        for (let i = 0; i < rows; i++) {
+            arrEx3[i] = new Array(rows)
+            for (let j = 0; j < col; j++) {
+                arrEx3[i].push(Math.floor(Math.random() * 20 + 1));
+            }
+        }
+        let stringArrEx3 = arrEx3.toString().length
+        alert("Tổng số ký tự là "+ stringArrEx3)
+        console.log(stringArrEx3);
+    }
+</script>
+
+<h3>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi</h3>
+<button onclick="exercise4()">Bấm để thực hành bài 4</button>
+<script>
+function exercise4() {
+    let stringEx4 = prompt("nhập string vào đây để đếm số ký tự")
+    let counting = stringEx4.length;
+    alert("số ký tự trong mảng bạn vừa nhập là " + counting)
+}
+
+</script>
+
+
+<h3>Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</h3>
+<button onclick="exercise5()">Bấm để thực hành bài 5</button>
+<script>
+    function exercise5(){
+        let arrEx5 = []
+        let arrEx51 = []
+        let displayEx5 = ""
+        for (let i = 0; i < 10; i++) {
+            arrEx5.push(Math.floor(Math.random() * 20 + 1))
+            arrEx51.push(Math.floor(Math.random() * 20 + 1))
+        }
+        for (let j = 0; j < 10 ; j++) {
+            if (arrEx51.indexOf(arrEx5[j]) !== -1) {
+                displayEx5 += arrEx5[j] + ","
+            }
+        }
+        console.log(arrEx5);
+        console.log(arrEx51);
+        alert(`Mảng 1 là: ${arrEx5} \nMảng 2 là: ${arrEx51}` + " \nSố lặp lại trong 2 mảng là " +(displayEx5))
+    }
+
+</script>
+
+<h3>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</h3>
+<button onclick="exercise6()">Bấm để thực hành bài 6</button>
+<script>
+
+function exercise6() {
+    let stringEx6 = ["-", ".", "_", "+"]
+    let index = stringEx6.indexOf("-")
+    for (let i = 0; i < stringEx6.length; i++) {
+        if (index !== -1) {
+            stringEx6[index] = "_"
+        }
+    }
+console.log(index)
+    console.log(stringEx6);
+
+}
+
+
+</script>
+
+
+
 </body>
 </html>
