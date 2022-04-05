@@ -1,10 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <style>
+        td {
+        height: 50px;
+        width: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-$END$
+<table id="board" border="1px" ></table>
+
+<script>
+
+
+    const player1 = "X";
+    const player2 = "O";
+    let turn = player1;
+
+    function createBoard(row,col) {
+    let str = ""
+        for (let i = 0; i < row; i++) {
+            str = str + "<tr>";
+            for (let j = 0; j < col; j++) {
+                str = str + `<td id="celldata-${j}-${i}" onclick='clickToCell(${j},${i})'></td>`
+            }
+
+            str = str + "</tr>"
+        }
+        document.getElementById('board').innerHTML = str;
+
+    }
+
+
+    function clickToCell(x,y) {
+        let cell = document.getElementById(`celldata-${x}-${y}`);
+        if(cell.innerHTML === "") {
+            if (turn === player1) {
+                cell.innerHTML = player1;
+                turn = player2;
+            } else {
+                cell.innerHTML = player2;
+                turn = player1;
+            }
+        }
+        checkNgang(x,y)
+        checkDoc(x,y)
+        checkcheo1(x,y)
+        checkcheo2(x,y)
+    }
+
+function getCellValue(x,y) {
+    let cell = document.getElementById(`celldata-${x}-${y}`);
+    return cell.innerHTML;
+}
+
+function checkNgang(x,y) {
+let cell = getCellValue(x,y);
+let i = 1;
+let count = 1;
+    while (cell === getCellValue(x+i,y)){
+    count++;
+    i++;
+    }
+
+    i = 1;
+    while (cell === getCellValue(x-i,y)){
+        count++;
+        i++;
+    }
+
+    if (count >= 5 ) {
+        alert("Win")
+    }
+}
+
+
+function checkDoc(x,y) {
+    let cell = getCellValue(x,y);
+    let i = 1;
+    let count = 1;
+    while (cell === getCellValue(x, y + i)){
+        count++;
+        i++;
+    }
+    i = 1
+    while (cell === getCellValue(x, y - i)){
+        count++;
+        i++;
+    }
+
+    if(count >= 5) {
+        alert("win")
+    }
+
+}
+
+function checkcheo1(x,y){ //chechcheo1 để kiểm tra từ chái qua phải, trên xuống dưới (11h->5h)
+    let cell = getCellValue(x,y);
+    let i = 1;
+    let count = 1;
+    while (cell === getCellValue(x + i, y + i)){
+        count++;
+        i++;
+    }
+    i = 1
+    while (cell === getCellValue(x - i, y - i)){
+        count++;
+        i++;
+    }
+    if(count >= 5) {
+        alert("win")
+    }
+
+    }function checkcheo2(x,y){ //chechcheo2 để kiểm tra từ chái qua phải, dưới lên trên (7h->2h)
+    let cell = getCellValue(x,y);
+    let i = 1;
+    let count = 1;
+    while (cell === getCellValue(x + i, y - i)){
+        count++;
+        i++;
+    }
+    i = 1
+    while (cell === getCellValue(x - i, y + i)){
+        count++;
+        i++;
+    }
+    if(count >= 5) {
+        alert("win")
+    }
+
+    }
+
+    createBoard(10,10);
+
+
+</script>
+
 </body>
 </html>
