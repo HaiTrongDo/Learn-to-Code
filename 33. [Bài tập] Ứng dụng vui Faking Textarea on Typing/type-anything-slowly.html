@@ -8,7 +8,7 @@
 <label>Type Anything slowly <br>
 <textarea name="textArea" id="textArea-el" cols="30" rows="10" ></textarea>
 </label>
-<p id="display-el"></p>
+<!--<p id="display-el"></p>-->
 
 <script>
 
@@ -21,17 +21,17 @@ function keyProcessing() {
     if (textArea > 0 && textArea < 22) {
         for (let i = 0; i < textArea ; i++) {
             display += textArr[i];
-            document.getElementById("textArea-el").value = display
+            document.getElementById("textArea-el").value = display;
         }
     } else {
         display = ""
-        document.getElementById("textArea-el").value = display
+        document.getElementById("textArea-el").value = display;
     }
 
-    document.getElementById("textArea-el").value = display;
-    display = "";
+    //document.getElementById("textArea-el").value = display;
+    // display = "";
     setTimeout("keyProcessing()", 1);
-};
+}
 
 
 

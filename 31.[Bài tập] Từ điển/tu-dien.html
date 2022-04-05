@@ -13,7 +13,7 @@
 
     function wordSearching() {
         let engDict = ["Hello", "Hi", "bye"];
-        let vietDict = ["Xin Chao", "Chào", "Tạm biệt"];
+        let vietDict = ["Xin Chào", "Chào", "Tạm biệt"];
 
         let wordSearch = document.getElementById("wordSearch");
         console.log(wordSearch.value);
@@ -22,7 +22,7 @@
 
 
         for (let i = 0; i < engDict.length; i++) {
-            if (wordSearch.value.toLowerCase() === engDict[i].toLowerCase()) {
+            if (wordSearch.value.toUpperCase() === engDict[i].toUpperCase()) {
                index = i;
                break;
             }
