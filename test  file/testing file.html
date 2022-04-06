@@ -9,7 +9,8 @@
 <script>
 function removeRoomCol(x,y){
 let value = 1
-   let arr = [[]]
+   let arr = []
+        let totalValue = 0
    for (let i = 0; i < 5; i++) {
        arr[i] = new Array(5)
        for (let j=0; j < 5; j++){
@@ -21,8 +22,21 @@ let value = 1
 for (let i = y; i < arr.length; i++)
 arr[i][x] = 0
 console.log(arr)
-   }
-   removeRoomCol(1,1)
+
+        for (let k = 0; k < arr.length; k++){
+            for (let p = 0; p <arr[k].length;p++){
+            totalValue+= arr[k][p]
+        }
+    }
+    console.log("Tổng value các phòng còn lại là " + totalValue)
+return totalValue
+}
+
+
+
+removeRoomCol(1,1)
+
+
 
 </script>
 
