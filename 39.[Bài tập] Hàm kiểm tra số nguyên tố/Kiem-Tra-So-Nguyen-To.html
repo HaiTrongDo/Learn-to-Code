@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+
+<script>
+
+
+    function checkPrimeNum(N) {
+        if (N < 2) {
+            return false;
+        }
+
+        for (let i = 2; i < N; i++) {
+            if (N % i === 0) {
+                return false;
+            }
+        }
+        return true
+    }
+
+
+    function primeList() {
+        // let x = +prompt("Điền những số nguyên bạn cần")
+        let count = prompt("nhập số nguyên nhỏ hơn số bạn cần")
+        let N = 0;
+        let arr =[];
+
+        while (N < count) {
+            if (checkPrimeNum(N) === true) {
+                arr.push(N);
+                N++;
+
+            }
+            N++;
+        }
+        console.log(arr);
+    return arr;
+    }
+    let arrAfter = primeList();
+document.write(arrAfter)
+
+
+
+
+
+
+    // let prime = []
+    // function isPrime(number){
+    //     let prime=[];
+    //     for (let i = 3; i < number; i++) {
+    //         for (let j = 2; j < i; j++){
+    //         if (i % j ===0){
+    //             prime.push(i);
+    //             break;
+    //         }
+    //     }
+    // }
+    // console.log(prime);
+    // return prime;
+    //
+    // }
+    // isPrime(1000)
+    // console.log(prime);
+</script>
+
+
+</body>
+</html>
