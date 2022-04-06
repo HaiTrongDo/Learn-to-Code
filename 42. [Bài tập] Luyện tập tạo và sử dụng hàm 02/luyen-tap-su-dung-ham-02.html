@@ -1,10 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
 </head>
 <body>
-$END$
+<h3>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h3>
+<button onclick="exercise1()">Bấm để thực hành bài 1</button>
+<script>
+    function exercise1() {
+        let inputEx1 = +prompt("nhập số bạn cần tính bình phương")
+        let resultEx1 = inputEx1 ** 2
+        alert(`Bình phương của ${inputEx1} là ${resultEx1}`)
+    }
+</script>
+
+<h3>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</h3>
+<button onclick="exercise2()">Bấm để thực hành bài 2</button>
+<script>
+    function exercise2() {
+        let inputEx2 = prompt("nhập bán kính hình tròn (R)")
+        let pi = 3.14
+        let square = (inputEx2 ** 2) * pi;
+        let perimeter = 2 * pi * inputEx2;
+        alert(`Hình tròn có bán kính là ${inputEx2} có chu vi là ${perimeter} và có diện tích là ${square}`)
+    }
+</script>
+
+
+<h3>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h3>
+<button onclick="exercise3()">Bấm để thực hành bài 3</button>
+<script>
+    function exercise3() {
+        let inputEx3 = +prompt("Nhập số giai thừa cần tính")
+        let totalEx3 = 1;
+        if (inputEx3 === 0) { // vì 0! = 1, vậy phải so sánh trước khi chay vòng lặp
+            totalEx3 = 1
+        } else {
+            for (let i = 1; i <= inputEx3; i++) {
+                totalEx3 *= i
+            }
+        }
+        alert(`Số giai thừa !${inputEx3} có giá trị là ${totalEx3}`)
+    }
+</script>
+
+
+<h3>Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại
+    trả về false.</h3>
+<button onclick="exercise4()">Bấm để thực hành bài 4</button>
+<script>
+
+    function exercise4(){
+    let inputEx4 = prompt("Nhập vào đây để kiểm tra");
+        if(isNaN(inputEx4) === true) { //hàm isNaN (is Not a Number) kiểm tra xem giá trị nhập vào là số hay chữ, kể cả 12k có cả số và chữ, cũng sẽ có giá trị là true
+            alert("false")
+        } else {
+            alert("true")
+        }
+    }
+
+</script>
+
+
+<h3>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</h3>
+<button onclick="exercise5()">Bấm để thực hành bài 5</button>
+<script>
+    function exercise5() {
+        let inputEx5a = +prompt("nhập số a")
+        let inputEx5b = +prompt("nhập số b")
+        let inputEx5c = +prompt("nhập số c")
+        let resultEx5 = 0;
+
+        if (inputEx5a > inputEx5b && inputEx5a > inputEx5c) {
+            resultEx5 = inputEx5a;
+        } else if (inputEx5b > inputEx5c) {
+            resultEx5 = inputEx5b;
+        } else {
+            resultEx5 = inputEx5c;
+        }
+        alert(`số lớn nhất là ${resultEx5}`)
+    }
+
+</script>
+
+
+
+<h3>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả
+    về true, ngược lại trả về false.</h3>
+<button onclick="exercise6()">Bấm để thực hành bài 6</button>
+<script>
+
+</script>
+
+
+<h3>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</h3>
+<button onclick="exercise7()">Bấm để thực hành bài 7</button>
+
+<h3>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</h3>
+<button onclick="exercise8()">Bấm để thực hành bài 8</button>
+
+<h3>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng
+    không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </h3>
+<button onclick="exercise9()">Bấm để thực hành bài 9</button>
+
 </body>
 </html>
