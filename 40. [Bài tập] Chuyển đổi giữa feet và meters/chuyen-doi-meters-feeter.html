@@ -5,6 +5,31 @@
     <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
 </head>
 <body>
+<label><input type="number" name="meter-el" id="meter-el"></label>
+<p id="outPutFeeter"></p>
+<button id="meters-feet" onclick="metersFeet()">Meters - Feet</button>
+<button id="feet-meters" onclick="feetMeters()">Feet - Meters</button>
+
+<script>
+
+    function metersFeet() {
+    let meters = Number(document.getElementById("meter-el").value)
+    let outPutFeeter = 0;
+        outPutFeeter = meters/0.305
+        document.getElementById("outPutFeeter").innerHTML= outPutFeeter;
+        console.log(outPutFeeter);
+    }
+
+    function feetMeters() {
+    let feet = Number(document.getElementById("meter-el").value)
+    let outPutMeter = 0;
+        outPutMeter = feet*0.305
+        document.getElementById("outPutFeeter").innerHTML= outPutMeter;
+        console.log(outPutMeter);
+    }
+</script>
+
+
 
 </body>
 </html>
