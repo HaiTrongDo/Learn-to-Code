@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+    <style>
+        #result1 {
+            color : red;
+        }
+        #result2 {
+            color : red;
+        }
+    </style>
 </head>
 <body>
 
@@ -57,18 +65,38 @@ let b = +prompt("nhập đối số b")    //đối số b sẽ được nhập 
     return result;
 }
 result = 0;
+    <p id="result1"></p>
 result = addNumbers();
+    <p id="result2"></p>
 </pre>
 
+<script>
+    function exercise4() {
+        document.getElementById("result1").innerHTML = "alert('result before function addNumber() runs' <br>"
+        document.getElementById("result2").innerHTML = "alert('result after function addNumber() runs' <br>"
+    }
+
+
+</script>
 <h3>Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả lại tên chòm sao của ngôi sao đó. Trong phần <body> của trang web, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào. Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình.</h3>
-<button onclick="exercise5()">Bấm để thực hành bài 5</button>
+<button onclick="checkStarNameInGroup()">Bấm để thực hành bài 5</button>
 
 
 <script>
 
-
-
-
+let str1 = "Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe , Regulus"
+let str2 =  "Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major, Leo"
+function checkStarNameInGroup() {
+let inputEx5 = prompt("Nhập tên ngôi sau bạn muốn tìm")
+let arrEx51 = str1.split(", ");//biến thành string
+let arrEx52 = str2.split(", ");
+    for (let i = 0; i < arrEx51.length; i++) {  //vòng lặp so sánh inputEx5 với phầm từ trong mảng arrEx51, nếu thấy in ra kết quả, không thấy thì in ra không tìm thấy
+        if (inputEx5 === arrEx51[i]){
+            return alert(`Tên chòm sao bạn tìm là ${arrEx52[i]}`)
+        }
+    }
+    alert("Tên ngôi sao không tồn tại")
+}
 </script>
 
 </body>
