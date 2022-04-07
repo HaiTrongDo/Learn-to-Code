@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Kiểm tra từ đối xứng</title>
+</head>
+<body>
+
+<script>
+    let str = prompt("Nhập chuỗi vào đây")
+    let arr = str.split("");
+    console.log(arr);
+    let checking = true
+
+    function isPalindrome(s) {
+        if (s < arr.length) {
+            if (arr[s] === arr[arr.length - 1 - s]) { //so sánh nếu ký tự đầu và cuối === nhau, chạy dần từ 0 - cuối mảng
+                isPalindrome(s + 1) // điều kiện để hàm đệ quy dừng lại
+            } else {
+                // checking = false
+                return alert("Chuỗi không đối xứng") // nếu các ký từ khác nhau thì báo hàm không đối xứng và dừng lại luôn
+            }
+        } else {
+            alert("Chuỗi đối xứng") // khi s tăng đến quá arr.length hàm vẫn đáp ứng điều kiện đối xứng nhau thì thông báo
+        }
+
+
+    }
+    isPalindrome(0)
+
+</script>
+
+
+
+</body>
+</html>
