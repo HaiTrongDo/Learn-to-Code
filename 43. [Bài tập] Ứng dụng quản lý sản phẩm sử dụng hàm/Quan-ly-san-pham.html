@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <style>
+        tr,td {
+            font-weight: bold;
+        }
+        button {
+            font-weight: bold;
+            background: blanchedalmond ;
+        }
+    </style>
+</head>
+<body>
+<p></p>
+
+<a href="https://james.codegym.vn/mod/assign/view.php?id=5867">Link đề bài</a>
+
+
+
+<script>
+    let products = [
+        "Sony Xperia",
+        "Samsung Galaxy",
+        "Nokia 6",
+        "Xiaomi Redmi Note 4",
+        "Apple iPhone 6S",
+        "Xiao Mi 5s Plus"
+    ]
+    renderTable()
+    function renderTable() {
+     let table = "<table border='1'>" +
+         "<th>No.</th>" +
+         "<th>Product Name</th>" +
+         "<th>Edit Button</th>" +
+         "<th>Delete Button</th>"
+
+
+    for (let i = 0; i < products.length; i++) {
+        table+= `<tr>
+                    <td>${i + 1}</td>
+                    <td>${products[i]}</td>
+                    <td><button onclick="edit(${products[i]})">Edit</button></td>
+                    <td><button onclick="deleteItem(${products[i]})">Delete</button></td>
+                </tr>`
+    }
+document.write(table)
+
+    }
+
+
+    function edit(name){
+    let index = products.indexOf(name)
+    products[index] = prompt("Nhập lại tên sản phẩm");
+        renderTable()
+    }
+    function deleteItem(item) {
+
+    }
+
+</script>
+</body>
+</html>

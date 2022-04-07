@@ -9,23 +9,24 @@
 <h3>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.</h3>
 <button id="exercise1" onclick="exercise1()" >Bấm để làm bài 1</button>
 <script>
-function exercise1() {
-let arrEx1 =[]
-    for (let i = 1; i <=10 ; i++) {
-        arrEx1[i] = Math.floor(Math.random()*20 + 1);
-    }
+    function exercise1() {
+        let arrEx1 = []
+        for (let i = 0; i < 10; i++) {
+            arrEx1[i] = Math.floor(Math.random() * 20 + 1);
+        }
 
-function findNumbGreaterThanTen() {
-    let count = 0;
-    for (let i = 1; i <=10 ; i++) {
-        if (arrEx1[i] > 10) {
-        count++;
+        function findNumbGreaterThanTen() {
+            let count = 0;
+            for (let i = 0; i < 10; i++) {
+                if (arrEx1[i] > 10) {
+                    count++;
+                }
+            }
+            alert(`Your input Array has ${count} number(s) that greater than 10`)
+        }
+
+        findNumbGreaterThanTen()
     }
-    }
-    alert(`Your input Array has ${count} number(s) that greater than 10` )
-}
-findNumbGreaterThanTen()
-}
 
 </script>
 <h3>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</h3>
