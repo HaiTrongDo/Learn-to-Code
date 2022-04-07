@@ -85,24 +85,73 @@
 </script>
 
 
-
 <h3>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả
     về true, ngược lại trả về false.</h3>
 <button onclick="exercise6()">Bấm để thực hành bài 6</button>
 <script>
-
+function exercise6() {
+    let inputEx6 = prompt("Nhập số vào đây")
+    if (inputEx6 % 1 ===0){
+        alert("true")
+    } else {
+        alert("false")
+    }
+}
 </script>
-
 
 <h3>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</h3>
 <button onclick="exercise7()">Bấm để thực hành bài 7</button>
+<script>
+    function exercise7(){
+        let inputEx71 = prompt("Nhập số nguyên thứ nhất")
+        let inputEx72 = prompt("Nhập số nguyên thứ hai")
+        let arr = [inputEx71,inputEx72]
+        let arr1= [inputEx72,inputEx71]
+        alert(arr1)
+    }
+
+</script>
 
 <h3>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</h3>
 <button onclick="exercise8()">Bấm để thực hành bài 8</button>
+<input type="text" id="inputEx8" placeholder="Nhập mảng vào đây">
+<script>
+    function exercise8() {
+        let inputEx8 = document.getElementById("inputEx8").value;
+        let arrEx8 = inputEx8.split(",")
+        console.log(arrEx8);
+        let newArrEx8 = arrEx8.reverse()
+        console.log(newArrEx8);
+    }
+
+</script>
 
 <h3>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng
     không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </h3>
 <button onclick="exercise9()">Bấm để thực hành bài 9</button>
+
+<input type="text" id="inputEx91" placeholder="Nhập mảng ký tự">
+<input type="text" id="inputEx92" placeholder="Nhập ký tự cần tìm">
+<script>
+    function exercise9() {
+    let inputEx91 = document.getElementById("inputEx91").value;
+    let inputEx92 = document.getElementById("inputEx92").value;
+    let arrEx91 = inputEx91.split(",");
+
+        function checkArr(arr, value) {
+            let resultEx9 = arr.indexOf(value)
+
+                if (resultEx9 !== -1) {
+                    alert(`Ký tự ${value} có trong mảng`);
+                } else {
+                    alert(`Ký tự ${value} không có trong mảng`);
+                }
+            }
+checkArr(arrEx91,inputEx92)
+}
+
+</script>
+
 
 </body>
 </html>
