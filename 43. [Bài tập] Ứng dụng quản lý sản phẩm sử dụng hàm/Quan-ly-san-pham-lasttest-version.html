@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <style>
+        tr, td {
+            font-weight: bold;
+        }
+        button {
+            font-weight: bold;
+            background: blanchedalmond;
+        }
+        table {
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+<p></p>
+// nếu muốn thêm số lượng và những cột khác có thể sử dụng array dimension để có hiệu quả cao hơn
+<a href="https://james.codegym.vn/mod/assign/view.php?id=5867">Link đề bài</a> <br>
+<input id="addNewProduct" name="addNewProduct" type="text" placeholder="Nhập tên sản phẩm">
+<button id="btnAddProducts-el" onclick="addProductsEl()">Add other item</button>
+
+<table  id="listOfProduct"></table>
+
+<script>
+    let products = [
+        "Sony Xperia",
+        "Samsung Galaxy",
+        "Nokia 6",
+        "Xiaomi Redmi Note 4",
+        "Apple iPhone 6S",
+        "Xiao Mi 5s Plus"
+    ]
+    renderTable()
+
+    function renderTable() {
+        let table =
+            "<th>No.</th>" +
+            "<th>Product Name</th>" +
+            "<th>Edit Button</th>" +
+            "<th>Delete Button</th>"
+
+
+        for (let i = 0; i < products.length; i++) {
+            table += `<tr>
+                    <th>${i + 1}</th>
+                    <td>${products[i]}</td>
+                    <th><button onclick="edit(${i})">Edit</button></th>
+                    <th><button onclick="deleteItem(${i})">Delete</button></th>
+                </tr>`
+        }
+        document.getElementById("listOfProduct").innerHTML = table
+    }
+
+    function edit(index) {
+        let newName = prompt("Nhập lại tên sản phẩm")
+        console.log(newName);
+        if (newName !== null) {
+            let confirmEditBox = confirm("Bạn có chắc muốn thay đôi tên của sản phẩm")
+            if (confirmEditBox === true) {
+                products[index] = newName;
+                renderTable()
+            }
+        }
+    }
+
+    function deleteItem(index) {
+        let confirmDeleteBox = confirm("Bạn có chắc muốn xóa bài trên?")
+        if (confirmDeleteBox) {
+            products.splice(index, 1)
+            renderTable()
+        }
+    }
+
+    function addProductsEl() {
+        let newProductName = document.getElementById("addNewProduct").value;
+        let confirmAddProductBox = confirm(`Bạn có chắc muốn thêm sản phẩm mới tên là "${newProductName}" vào danh sách?`)
+        if(confirmAddProductBox === true) {
+            products.push(newProductName)
+            document.getElementById("addNewProduct").value = ""
+            renderTable()
+        }
+    }
+
+</script>
+</body>
+</html>
