@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            width: 1024px;
+            background-color: bisque;
+            margin: 0 auto;
+            float: left;
+            height: 500px;
+
+        }
+
+        .add-product {
+            width: 40%;
+            float: left;
+        }
+
+        .list-product {
+            width: 60%;
+            float: left;
+        }
+
+        .table-list-product {
+            width: 90%;
+            border-collapse: collapse;
+        }
+
+        .table-list-product td, tr {
+            border: 1px solid red
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="add-product">
+        sda
+    </div>
+
+    <div class="list-product">
+        <table class="table-list-product">
+            <tr>
+                <th>STT</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Author</th>
+
+            </tr>
+            <tbody id="list-product">
+
+            <tr>
+                <td>1</td>
+                <td>Samsung Note 20</td>
+                <td>40,000,000</td>
+                <td>Samsung</td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+<script src="Product.js"></script>
+<script src="ProductManager.js"></script>
+<script src="Main.js"></script>
+</body>
+</html>
