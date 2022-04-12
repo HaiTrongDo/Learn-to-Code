@@ -42,11 +42,13 @@ function Mobile(battery) {
         }
     }
     //Có chức năng gửi tin nhắn tới một chiếc mobile khác.
-    this.sendingMessage = function (toPhone,SentMessage){
+    this.sendingMessage = function(toPhone){
         if(this._phoneStatus === true){
-        this._sentMessage.push(SentMessage);
-        toPhone._incomeMessage.push(SentMessage);
+        this._sentMessage.push(this._writingMessage);
+        toPhone._incomeMessage.push(this._writingMessage);
         this._battery--;
+        } else {
+            alert("Điện thoại đang off")
         }
     }
     //Có chức năng xem tin trong hộp thư đến.
@@ -67,7 +69,11 @@ function Mobile(battery) {
     //Các chức năng không thể hoạt động nếu điện thoại chưa bật.
 }
 let iPhone = new Mobile(50)
-iPhone._writingMessage = "This is the message from iphone user"
-
-let Nokia = new Mobile(90)
-console.log(iPhone._writingMessage);
+let Samsung = new Mobile(90)
+iPhone.turnOnPhone()
+iPhone._writingMessage = "This is the message from iphone user";
+iPhone.sendingMessage(Samsung)
+// console.log(Samsung._incomeMessage);
+iPhone._writingMessage = "This is the second message from iphone user";
+iPhone.sendingMessage(Samsung)
+console.log(iPhone._sentMessage);
