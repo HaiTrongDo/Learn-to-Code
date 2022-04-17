@@ -1,6 +1,6 @@
-document.getElementById("Canvas").addEventListener("keydown", moveOnject)
-
-let moveBy = 10
+let moveBy = 10;
+let paper = document.getElementById("Canvas");
+let pen = paper.getContext("2d")
 
 
 class ObjectInCanvas {
@@ -9,41 +9,42 @@ class ObjectInCanvas {
         this.y = y
         this.size = size
     }
+
+    render(canvas) {
+        let pen = canvas.getContext("2d");
+        pen.beginPath();
+        pen.arc(circle.x, circle.y, circle.size, 0, 2 * Math.PI);
+        pen.stroke();
+        pen.fillStyle = "red"
+        pen.fill()
+    }
 }
 
+let circle = new ObjectInCanvas(50, 50, 50)
+console.log(circle)
+circle.render(paper)
 
-function render() {
-    let ctx = document.getElementById("Canvas").getContext("2d");
-    let circle = new ObjectInCanvas(50, 50, 50)
-    ctx.beginPath();
-    ctx.arc(circle.x, circle.y, circle.size, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.fillStyle = "red"
-    ctx.fill()
-}
+window.addEventListener("keydown", moveObject)
 
-render()
+function moveObject(e) {
+    pen.clearRect(0, 0, paper.width, paper.height)
+    switch (e.key) {
+        case 'ArrowLeft':
+            circle.x -= moveBy
+            break;
 
+        case 'ArrowRight':
+            circle.x += moveBy
 
-function moveOnject(e.key) {
-switch (e.key) {
-    case 'ArrowLeft':
-        ObjectInCanvas.x -= moveBy
-        break;
+            break;
+        case 'ArrowUp':
+            circle.y -= moveBy
 
-    case 'ArrowRight':
-        ObjectInCanvas.x += moveBy
-
-        break;
-    case 'ArrowUp':
-        ObjectInCanvas.y -= moveBy
-
-        break;
-    case 'ArrowDown':
-        ObjectInCanvas.y += moveBy
-        break;
-
-
-}
-
+            break;
+        case 'ArrowDown':
+            circle.y += moveBy
+            break;
+    }
+    circle.render(paper)
+    requestAnimationFrame(moveObject)
 }

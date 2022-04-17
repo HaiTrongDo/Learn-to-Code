@@ -27,9 +27,6 @@ class Television {
     checkCurrentStatus() {
         return this._currentStatus;
     }
-
-
-
 }
 
 

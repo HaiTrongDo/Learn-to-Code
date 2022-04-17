@@ -8,6 +8,8 @@ function Mobile(battery) {
     this._sentMessage = [];
     //Có một vùng nhớ dùng để lưu tin nhắn đã gửi.
 
+
+
     this.CheckPhoneStatus = function () {
         //Có chức năng kiểm tra trạng thái điện thoại bật hay tắt.
         this._phoneStatus = this._battery > 0 && this._battery < 100;
@@ -46,6 +48,7 @@ function Mobile(battery) {
         if(this._phoneStatus === true){
         this._sentMessage.push(this._writingMessage);
         toPhone._incomeMessage.push(this._writingMessage);
+        this._writingMessage ="";
         this._battery--;
         } else {
             alert("Điện thoại đang off")
@@ -73,7 +76,8 @@ let Samsung = new Mobile(90)
 iPhone.turnOnPhone()
 iPhone._writingMessage = "This is the message from iphone user";
 iPhone.sendingMessage(Samsung)
-// console.log(Samsung._incomeMessage);
-iPhone._writingMessage = "This is the second message from iphone user";
-iPhone.sendingMessage(Samsung)
+console.log(Samsung._incomeMessage);
 console.log(iPhone._sentMessage);
+
+console.log(iPhone._battery);
+console.log(Samsung._battery);

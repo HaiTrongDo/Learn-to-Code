@@ -6,5 +6,32 @@
 </head>
 <body>
 
+
+<script>
+
+    function timeConversion(s) {
+        let newS = s.slice(0, -2)
+        let arrS = newS.split(":")
+        let AmOrPM = s.slice(-2)
+        console.log(AmOrPM);
+        if (AmOrPM === "PM") {
+            if (arrS[0] != 12) {
+                arrS[0] = +arrS[0] + 12;
+            }
+        } else {
+            if (arrS[0]==12){
+                arrS[0]= "00"
+            }
+        }
+        let newtime = arrS.join(":")
+       return newtime;
+    }
+
+    timeConversion(s)
+
+
+    //     let a = timeConversion(s)
+    // console.log(a)
+</script>
 </body>
 </html>

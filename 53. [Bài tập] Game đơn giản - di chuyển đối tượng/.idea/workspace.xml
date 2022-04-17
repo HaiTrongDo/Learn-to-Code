@@ -9,12 +9,9 @@
       <change beforePath="$PROJECT_DIR$/../43. [Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/../43. [Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm/Product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../43. [Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm/ProductManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../43. [Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm/ProductManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../43. [Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../43. [Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Phone-description.html" beforeDir="false" afterPath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Phone-description.js" beforeDir="false" afterPath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../50. [Bài tập] Xây dựng lớp mô tả điện thoạiAssignment/Mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../55. [Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng công tắc và bóng đèn/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../55. [Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng công tắc và bóng đèn/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../55. [Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng công tắc và bóng đèn/tuong-tac-bong-den.html" beforeDir="false" afterPath="$PROJECT_DIR$/../55. [Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng công tắc và bóng đèn/tuong-tac-bong-den.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../58. [Bài tập] Phát triển chương trình sử dụng Remote để điều khiển Tivi/Remote-control.js" beforeDir="false" afterPath="$PROJECT_DIR$/../58. [Bài tập] Phát triển chương trình sử dụng Remote để điều khiển Tivi/Remote-control.js" afterDir="false" />
@@ -52,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../54. [Bài tập] Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -80,7 +77,7 @@
       <updated>1649593909724</updated>
       <workItem from="1649593910818" duration="2939000" />
       <workItem from="1649608988809" duration="2301000" />
-      <workItem from="1649752507007" duration="2852000" />
+      <workItem from="1649752507007" duration="3211000" />
     </task>
     <servers />
   </component>
